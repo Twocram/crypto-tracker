@@ -24,7 +24,11 @@ const CoinItemPage: FC = () => {
   }
   return (
     <div className='flex'>
-      <button onClick={getBack}>Back</button>
+      <button
+        className='text-black bg-white rounded-sm p-2 w-24'
+        onClick={getBack}>
+        Back
+      </button>
       <h1>{coin?.name}</h1>
       <img src={coin?.image.small} alt={coin?.symbol} />
     </div>
