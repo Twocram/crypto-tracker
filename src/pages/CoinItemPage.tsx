@@ -19,7 +19,7 @@ const CoinItemPage: FC = () => {
   }, []);
 
   function getBack(e: React.MouseEvent<HTMLButtonElement>) {
-    setCoin(null);
+    e.preventDefault();
     navigate('/');
   }
   return (
