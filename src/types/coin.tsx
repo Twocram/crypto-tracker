@@ -30,7 +30,8 @@ type TCoinItemMarketData = {
   current_price: {
     usd: number;
   };
-  market_cup: {
+  market_cap: {
     usd: number;
   };
+  price_change_percentage_24h: number;
 };
