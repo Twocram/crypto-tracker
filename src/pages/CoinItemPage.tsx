@@ -9,14 +9,14 @@ const CoinItemPage: FC = () => {
   const params = useParams<CoinItemPageParams>();
 
   useEffect(() => {
-    async function fetchUser() {
+    async function fetchCoin() {
       const response = await axios.get<TCoinItem>(
         'https://api.coingecko.com/api/v3/coins/' + params.id
       );
       setCoin(response.data);
     }
     setInterval(() => {
-      fetchUser();
+      fetchCoin();
     }, 1000);
   }, []);
 
