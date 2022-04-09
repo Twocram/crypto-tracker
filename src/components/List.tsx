@@ -7,6 +7,12 @@ interface ListProps<T> {
 
 export default function List<T>(props: ListProps<T>) {
   return (
-    <div className='flex flex-col'>{props.items.map(props.renderItem)}</div>
+    <>
+      {props.items.length > 0 ? (
+        <div className='flex flex-col'>{props.items.map(props.renderItem)}</div>
+      ) : (
+        <div className='flex justify-center mt-[50px] text-2xl'>No results</div>
+      )}
+    </>
   );
 }
